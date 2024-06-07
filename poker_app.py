@@ -62,7 +62,7 @@ total_rake_min_list = [total_rake_min] * len(hours)
 total_rake_max_list = [total_rake_max] * len(hours)
 
 # Plotting
-plot_financials(hours, total_rake_min_list, total_rake_max_list, employee_cost)
+#plot_financials(hours, total_rake_min_list, total_rake_max_list, employee_cost)
 
 # Profit calculations
 total_profit_min = [rake - cost for rake, cost in zip(total_rake_min_list, employee_cost)] 
