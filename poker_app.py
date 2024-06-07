@@ -1,7 +1,6 @@
-pip install matplotlib
 
 import streamlit as st
-import matplotlib.pyplot as plt
+## import matplotlib.pyplot as plt
 import pandas as pd
 
 # Function to calculate employee cost
@@ -22,18 +21,18 @@ def calculate_rake(player_count, buyin_rake, reentry_rake, entrance_fee, entranc
     return (total_rake_min + total_entrance_fee, total_rake_max + total_entrance_fee)
 
 # Function to plot financials
-def plot_financials(hours, rake_min, rake_max, employee_cost):
-    fig, ax = plt.subplots(figsize=(12, 6))
-    ax.plot(hours, rake_min, label='Total Rake (Min reentries + Entrance Fee)', linestyle='--')
-    ax.plot(hours, rake_max, label='Total Rake (Max reentries + Entrance Fee)', linestyle='--')
-    ax.plot(hours, employee_cost, label='Total Employee Cost (Adjusted)', color='red')
-    ax.fill_between(hours, rake_min, rake_max, color='lightgrey', alpha=0.5)
-    ax.set_xlabel('Hours')
-    ax.set_ylabel('Kr')
-    ax.set_title('Poker Tournament Financials (Adjusted for Table Closures, Reentry Fee, and Entrance Fee)')
-    ax.legend()
-    ax.grid(True)
-    st.pyplot(fig)
+#def plot_financials(hours, rake_min, rake_max, employee_cost):
+#    fig, ax = plt.subplots(figsize=(12, 6))
+#    ax.plot(hours, rake_min, label='Total Rake (Min reentries + Entrance Fee)', linestyle='--')
+#    ax.plot(hours, rake_max, label='Total Rake (Max reentries + Entrance Fee)', linestyle='--')
+#    ax.plot(hours, employee_cost, label='Total Employee Cost (Adjusted)', color='red')
+#    ax.fill_between(hours, rake_min, rake_max, color='lightgrey', alpha=0.5)
+#    ax.set_xlabel('Hours')
+#    ax.set_ylabel('Kr')
+#    ax.set_title('Poker Tournament Financials (Adjusted for Table Closures, Reentry Fee, and Entrance Fee)')
+#    ax.legend()
+#    ax.grid(True)
+#    st.pyplot(fig)
 
 # Streamlit web app
 st.title('Poker Tournament Financials')
